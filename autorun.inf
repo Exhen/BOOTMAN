@@ -1,0 +1,5 @@
+[AutoRun.Amd64]
+icon=\grub2\bootman.ico
+
+[AutoRun]
+icon=\grub2\bootman.ico
