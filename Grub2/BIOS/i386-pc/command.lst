@@ -102,6 +102,7 @@ gdbstub_break: gdb
 gdbstub_stop: gdb
 gptsync: gptsync
 help: minicmd
+hexdump_random: random
 initrd16: linux16
 initrd: linux
 keymap: keylayouts
