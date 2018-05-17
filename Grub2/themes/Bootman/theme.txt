@@ -1,8 +1,9 @@
 # Global Property
+# one group of box bkg can not be used in two or more box, otherwise will cause bugs in size.
 title-text: ""
-title-font: "POP Regular 40"
+title-font: "batman Regular 40"
 title-color: "#007acd"
-message-font: "sarasa Regular 24"
+message-font: "sarasa-term-sc-bold Bold 24"
 message-color: "#FFFFFF"
 message-bg-color: "#f6f6f6"
 desktop-image: "background.png"
@@ -10,22 +11,22 @@ desktop-color: "#000000"
 desktop-image-scale-method: "crop"
 desktop-image-h-align: "right"
 desktop-image-v-align: "top"
-terminal-box: "menu_bkg_*.png"
+terminal-box: "term_bkg_*.png"
 terminal-left: "5%"
-#terminal-top: "35%"
-terminal-width: "90%"
-#terminal-height: "30%"
-terminal-font: "sarasa Regular 16"
+terminal-top:"25"
+terminal-width:"90"
+terminal-height: "50%"
 
-+ label {width = 50% left=7% top=15%-45 text = "BOOTMAN MENU" font = "POP Regular 40" color = "#007acd" align = "right"}
+
++ label {width = 50% left=7% top=15%-45 text = "BOOTMAN@MENU" font = "batman Regular 40" color = "#007acd" align = "right"}
 # Show the boot menu
 + boot_menu {
 		left = 7%
 		width = 50%
 		top = 15%
 		height = 60%
-		item_font = "sarasa Regular 24"
-		selected_item_font = "sarasa Regular 24"
+		item_font = "sarasa-term-sc-bold Bold 24"
+		selected_item_font = "sarasa-term-sc-bold Bold 24"
 		item_color = "#007acd"
 		selected_item_color = "#FFFFFF"
 		item_height = 38
@@ -37,9 +38,14 @@ terminal-font: "sarasa Regular 16"
 		selected_item_pixmap_style= "select_bkg_*.png"
 		menu_pixmap_style = "menu_bkg_*.png"
 		scrollbar = true
-		scrollbar_width = 24
+		scrollbar_slice = center
+		scrollbar_width = 20%
+		scrollbar_top_pad = 7%
+		scrollbar_bottom_pad = 7%
+		scrollbar_right_pad = 7%
 		scrollbar_thumb = "sb_thumb_*.png"
 		scrollbar_frame = "sb_frame_*.png"
+		scrollbar_thumb_overlay = true
 }
 
 # Show a styled horizontal progress bar
@@ -50,7 +56,7 @@ terminal-font: "sarasa Regular 16"
 		top = 76%
 		height = 4%
 		show_text = true
-		font = "sarasa Regular 14"
+		font = "sarasa-term-sc-bold Bold 14"
 		text_color = "#39afff"
 		text = "@TIMEOUT_NOTIFICATION_LONG@"
 		bar_style = "progress_bar_*.png"
@@ -65,14 +71,14 @@ terminal-font: "sarasa Regular 16"
 }
 # Show an informational message.
 + hbox {
-		top = 100%-19
+		top = 100%-24
 		#left = 50%-423
 		width=100%
 		align = "center"
-		+ label {width=16% text = "Enter: " font = "sarasa Regular 14" color = "#39afff" align = "right"}
-		+ label {width=16% text = "Boot Selection	" font = "sarasa Regular 14" color = "#ffffff" align = "left"}
-		+ label {width=16% text = "E: " font = "sarasa Regular 14" color = "#39afff" align = "right"}
-		+ label {width=16% text = "Edit Selection	" font = "sarasa Regular 14" color = "#ffffff" align = "left"}
-		+ label {width=16% text = "C: " font = "sarasa Regular 14" color = "#39afff" align = "right"}
-		+ label {width=16% text = "GRUB Commandline" font = "sarasa Regular 14" color = "#ffffff" align = "left"}
+		+ label {width=16% text = "Enter: " font = "sarasa-term-sc-bold Bold 14" color = "#39afff" align = "right"}
+		+ label {width=16% text = "Boot Selection	" font = "sarasa-term-sc-bold Bold 14" color = "#ffffff" align = "left"}
+		+ label {width=16% text = "E: " font = "sarasa-term-sc-bold Bold 14" color = "#39afff" align = "right"}
+		+ label {width=16% text = "Edit Selection	" font = "sarasa-term-sc-bold Bold 14" color = "#ffffff" align = "left"}
+		+ label {width=16% text = "C: " font = "sarasa-term-sc-bold Bold 14" color = "#39afff" align = "right"}
+		+ label {width=16% text = "GRUB Commandline" font = "sarasa-term-sc-bold Bold 14" color = "#ffffff" align = "left"}
 }
