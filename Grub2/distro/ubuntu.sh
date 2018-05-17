@@ -2,9 +2,9 @@ set icon="ubuntu";
 set vmlinuz_img="(loop)/casper/vmlinuz*";
 set initrd_img="(loop)/casper/initrd*";
 function CHSLocale {
-	echo "是否使用简体中文？按[Y]选择简体中文，按其他键使用默认语言。";
-	getkey key;
-	if [ "$key" == "121" ]; then
+	echo "是否使用简体中文？输入[yes]选择简体中文，按其他键使用默认语言。";
+	read lang_flag;
+	if [ "$lang_flag" == "yes"|"YES"|"Yes"|"y"|"Y" ]; then
 		kcmdline="${kcmdline} locale=zh_CN.UTF-8";
 	fi;
 }
