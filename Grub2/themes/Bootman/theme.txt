@@ -16,6 +16,7 @@ terminal-left: "5%"
 terminal-top:"25"
 terminal-width:"90"
 terminal-height: "50%"
+terminal-border: "1"
 
 
 + label {width = 50% left=7% top=15%-45 text = "BOOTMAN@MENU" font = "batman Regular 40" color = "#007acd" align = "right"}
@@ -76,9 +77,9 @@ terminal-height: "50%"
 		width=100%
 		align = "center"
 		+ label {width=16% text = "Enter: " font = "sarasa-term-sc-bold Bold 14" color = "#39afff" align = "right"}
-		+ label {width=16% text = "Boot Selection	" font = "sarasa-term-sc-bold Bold 14" color = "#ffffff" align = "left"}
+		+ label {width=16% text = "Boot Selection " font = "sarasa-term-sc-bold Bold 14" color = "#ffffff" align = "left"}
 		+ label {width=16% text = "E: " font = "sarasa-term-sc-bold Bold 14" color = "#39afff" align = "right"}
-		+ label {width=16% text = "Edit Selection	" font = "sarasa-term-sc-bold Bold 14" color = "#ffffff" align = "left"}
+		+ label {width=16% text = "Edit Selection " font = "sarasa-term-sc-bold Bold 14" color = "#ffffff" align = "left"}
 		+ label {width=16% text = "C: " font = "sarasa-term-sc-bold Bold 14" color = "#39afff" align = "right"}
 		+ label {width=16% text = "GRUB Commandline" font = "sarasa-term-sc-bold Bold 14" color = "#ffffff" align = "left"}
 }
