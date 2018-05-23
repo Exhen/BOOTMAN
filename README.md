@@ -9,6 +9,8 @@ Grub2的安装非常简单，如果只是做UEFI启动，甚至不用工具。
 稍麻烦一点，我们需要用到[Bootice](http://www.ipauly.com/)
 <img src="https://github.com/Exhen/BOOTMAN/blob/master/README/install%20guide.png">
 注意：此操作要把引导扇区写入U盘，一共需要177扇区，如果主分区表没有这么多引导扇区的话，强行写入会导致无法访问U盘内数据。一般用Windows自带工具格式化过或软碟通USB-HDD+写入过的我自己测试没有问题，不过建议还是先备份U盘内数据再进行操作。另外，如果需要需要U盘有多个分区，建议先写入引导再分区，第一个分区最好留为Grub2的FAT32分区。
+### U盘多分区
+<b>如果想使用U盘多分区，比较保险的方式为：使用DG分出多分区（MBR分区表），将第一个分区格式化为FAT32，然后用Bootice写入主引导扇区Gl2dr文件</b>
 ## 如何使用
 界面菜单栏前面的数字和字母代表快捷键。
 <img src="https://github.com/Exhen/BOOTMAN/blob/master/README/appearance.png">
